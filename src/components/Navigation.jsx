@@ -1,9 +1,12 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
@@ -15,18 +18,18 @@ const Navigation = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="/" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <button onClick={() => navigate("/")} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Home
-              </a>
-              <a href="/courses" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </button>
+              <button onClick={() => navigate("/courses")} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Courses
-              </a>
-              <a href="/dashboard" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </button>
+              <button onClick={() => navigate("/dashboard")} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Dashboard
-              </a>
-              <a href="/about" className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </button>
+              <button onClick={() => navigate("/about")} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About Us
-              </a>
+              </button>
               <Button variant="default" className="ml-4">Sign In</Button>
             </div>
           </div>
@@ -45,18 +48,18 @@ const Navigation = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="/" className="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
+            <button onClick={() => navigate("/")} className="block w-full text-left text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
               Home
-            </a>
-            <a href="/courses" className="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
+            </button>
+            <button onClick={() => navigate("/courses")} className="block w-full text-left text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
               Courses
-            </a>
-            <a href="/dashboard" className="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
+            </button>
+            <button onClick={() => navigate("/dashboard")} className="block w-full text-left text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
               Dashboard
-            </a>
-            <a href="/about" className="block text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
+            </button>
+            <button onClick={() => navigate("/about")} className="block w-full text-left text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">
               About Us
-            </a>
+            </button>
             <Button variant="default" className="w-full mt-4">Sign In</Button>
           </div>
         </div>
