@@ -1,4 +1,3 @@
-
 import { BookOpen, Clock, Award, BarChart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";

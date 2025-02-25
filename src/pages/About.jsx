@@ -1,4 +1,3 @@
-
 import { Users, Target, Heart, MessageSquare } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";

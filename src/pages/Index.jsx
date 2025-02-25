@@ -1,8 +1,25 @@
-
 import { ArrowRight, BookOpen, Users, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Web Developer",
+    comment: "The courses here transformed my career. The instructors are amazing and the content is top-notch."
+  },
+  {
+    name: "Michael Chen",
+    role: "Data Scientist",
+    comment: "I've taken multiple courses on this platform. The learning experience is unmatched."
+  },
+  {
+    name: "Emily Williams",
+    role: "UX Designer",
+    comment: "The flexibility and quality of courses helped me land my dream job. Highly recommended!"
+  }
+];
 
 const Index = () => {
   return (
@@ -125,23 +142,5 @@ const Index = () => {
     </div>
   );
 };
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "Web Developer",
-    comment: "The courses here transformed my career. The instructors are amazing and the content is top-notch."
-  },
-  {
-    name: "Michael Chen",
-    role: "Data Scientist",
-    comment: "I've taken multiple courses on this platform. The learning experience is unmatched."
-  },
-  {
-    name: "Emily Williams",
-    role: "UX Designer",
-    comment: "The flexibility and quality of courses helped me land my dream job. Highly recommended!"
-  }
-];
 
 export default Index;
